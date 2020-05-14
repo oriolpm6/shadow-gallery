@@ -1,0 +1,24 @@
+"""
+Created on Wed May 13 21:59:07 2020
+@author: Oriol Peláez
+"""
+import math
+ml = 280 # Maximum length of characters allowed
+
+t = input('Insert tweet: ')
+#t = '' # Insert text directly to the code
+
+l = len(t)
+temp_t = []
+
+if len(t) > ml:
+    p = math.ceil(l/ml) # Number of resulting tweets
+    jj = 0
+    print('\n The text has been divided in the next {} parts. \n'.format(p))
+    
+    for i in range(p):
+        temp_t.append(t[jj:jj+280])
+        print('{}/{} {}'.format(i+1, p, temp_t[i]))
+        jj += 280
+else:
+    print('The character limit has not been reached.')      
