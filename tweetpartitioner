@@ -9,8 +9,6 @@ t = input('Insert text: ')
 #t = '' # Insert text directly to the code
 l = len(t)
 
-
-
 temp_t = []
 
 if len(t) > ml:
